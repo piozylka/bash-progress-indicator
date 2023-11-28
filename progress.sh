@@ -7,7 +7,7 @@ start() {
   local MAX_STEPS=${#STEPS[@]}
   local MAX_BAR_SIZE="${#BAR_SIZE}"
 
-  tput civis -- invisible
+  tput civis 
 
   echo -ne "\\r[${BAR_SIZE:0:0}] 0 %$CLEAR_LINE"
   for step in "${!STEPS[@]}"; do
@@ -19,5 +19,5 @@ start() {
   done
   echo ""
 
-  tput cnorm -- normal
+  tput cnorm 
 }

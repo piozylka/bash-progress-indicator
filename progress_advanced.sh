@@ -6,7 +6,7 @@ start() {
   local MAX_BAR_SIZE="${#BAR_SIZE}"
   local CLEAR_LINE="\\033[K"
 
-  tput civis -- invisible
+  tput civis 
 
   for step in "${!STEPS[@]}"; do
     perc=$((step * 100 / MAX_STEPS))
@@ -23,5 +23,5 @@ start() {
   done
   echo ""
 
-  tput cnorm -- normal
+  tput cnorm 
 }

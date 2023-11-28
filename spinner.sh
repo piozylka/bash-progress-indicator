@@ -58,7 +58,7 @@ set_spinner() {
 start() {
   local step=0
 
-  tput civis -- invisible
+  tput civis 
 
   while [ "$step" -lt "${#CMDS[@]}" ]; do
     ${CMDS[$step]} & pid=$!
@@ -76,7 +76,7 @@ start() {
     step=$((step + 1))
   done
 
-  tput cnorm -- normal
+  tput cnorm 
 }
 
 set_spinner "$1"
